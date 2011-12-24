@@ -26,13 +26,13 @@
 		var horizontal = round(g,1);
 		if (horizontal < -20) {horizontal = -20}
 		if (horizontal > 20) {horizontal = 20}
-		horizontal = horizontal * 2.29 + 50;
+		horizontal = 100 - (horizontal * 2.29 + 50);
 		document.getElementById('horizontalMarker').style.left = horizontal + '%';
 		
 		var vertical = round(b,2);
 		if (vertical < -20) {vertical = -20}
 		if (vertical > 20) {vertical = 20}
-		vertical = vertical * 2.29 + 50;
+		vertical = 100 - (vertical * 2.29 + 50);
 		document.getElementById('verticalMarker').style.top = vertical + '%';
 	}
 	
