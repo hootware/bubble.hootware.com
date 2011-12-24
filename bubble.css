@@ -1,2 +1,123 @@
-html, body {padding:0; margin:0;}
-#wrapper {background-color: #ffff00;}
+html {overflow:hidden; padding:0px; margin:0px;}
+body {overflow:hidden; padding:0px; margin:0px; background: #949599;}
+#wrapper {overflow:hidden;}
+#bg {position:absolute; top:0px; left:0px; z-index:100;}
+#header {width:100%; background-color: #000000;
+	background-image: linear-gradient(bottom, #000000 0%, #404242 80%);
+	background-image: -o-linear-gradient(bottom, #000000 0%, #404242 80%);
+	background-image: -moz-linear-gradient(bottom, #000000 0%, #404242 80%);
+	background-image: -webkit-linear-gradient(bottom, #000000 0%, #404242 80%);
+	background-image: -ms-linear-gradient(bottom, #000000 0%, #404242 80%);
+	background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #000000), color-stop(0.8, #404242));
+	box-shadow: 0px 5px 10px #777;
+}
+h1 {font-size:2em;
+	font-family: 'Armata', helvetica, arial;
+	margin:0px;
+	padding:5px;
+	text-align:center;
+	color:#ffffff;
+	text-shadow: 0px 2px 2px #000;
+}
+#wrapper {}
+#horizontal.track {
+	position:relative;
+	margin:20px;
+	width:auto;
+	display:block;
+	height:30px;
+	border-radius:20px;
+	overflow:hidden;
+	border: #000000 solid 2px;
+	background-image: linear-gradient(bottom, #6FA529 0%, #C0E009 20%, #C0E009 80%, #6FA529 100%);
+	background-image: -o-linear-gradient(bottom, #6FA529 0%, #C0E009 20%, #C0E009 80%, #6FA529 100%);
+	background-image: -moz-linear-gradient(bottom, #6FA529 0%, #C0E009 20%, #C0E009 80%, #6FA529 100%);
+	background-image: -webkit-linear-gradient(bottom, #6FA529 0%, #C0E009 20%, #C0E009 80%, #6FA529 100%);
+	background-image: -ms-linear-gradient(bottom, #6FA529 0%, #C0E009 20%, #C0E009 80%, #6FA529 100%);
+	background-image: -webkit-gradient(
+		linear,
+		left bottom,
+		left top,
+		color-stop(0, #6FA529),
+		color-stop(0.2, #C0E009),
+		color-stop(0.8, #C0E009),
+		color-stop(1, #6FA529)
+	);
+}
+
+#horizontal.track .marker {
+	height:30px;
+	width:32px;
+	margin:0 auto;
+	border-left:2px solid #000000;
+	border-right:2px solid #000000;
+	position:relative;
+	z-index:10000;
+}
+
+#horizontal.track .bubble {
+	height:24px;
+	width:24px;
+	border-radius:25px;
+	position:absolute; top:2px;
+	border:1px solid #000000;
+	background-color: #C0E009;
+	margin-left:-13px;
+	z-index:1000;
+	/*left: 50%;*/
+}
+
+#vertical.track {
+	position:relative;
+	margin:20px;
+	width:30px;
+	height:300px;
+	display:block;
+	border-radius:20px;
+	overflow:hidden;
+	border:#000000 solid 2px;
+	background-image: linear-gradient(right , #6FA529 0%, #C0E009 20%, #C0E009 80%, #6FA529 100%);
+	background-image: -o-linear-gradient(right , #6FA529 0%, #C0E009 20%, #C0E009 80%, #6FA529 100%);
+	background-image: -moz-linear-gradient(right , #6FA529 0%, #C0E009 20%, #C0E009 80%, #6FA529 100%);
+	background-image: -webkit-linear-gradient(right , #6FA529 0%, #C0E009 20%, #C0E009 80%, #6FA529 100%);
+	background-image: -ms-linear-gradient(right , #6FA529 0%, #C0E009 20%, #C0E009 80%, #6FA529 100%);
+	background-image: -webkit-gradient(
+		linear,
+		right bottom,
+		left bottom,
+		color-stop(0, #6FA529),
+		color-stop(0.2, #C0E009),
+		color-stop(0.8, #C0E009),
+		color-stop(1, #6FA529)
+	);
+}
+
+#vertical.track .marker {
+	height:32px;
+	width:30px;
+	position:absolute;
+	top:50%;
+	margin-top:-18px;
+	border-top:2px solid #000000;
+	border-bottom:2px solid #000000;
+	z-index:10000;
+}
+
+#vertical.track .bubble {
+	height:24px;
+	width:24px;
+	border-radius:25px;
+	position:absolute; left:2px;
+	border:1px solid #000000;
+	background-color: #C0E009;
+	margin-top:-13px;
+	top: 50%;
+	z-index:1000;
+}
+
+
+
+
+
+#notSupported {}
+#supported {}

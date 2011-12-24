@@ -4,17 +4,33 @@
 		<title>Bubble - Spirit level app</title>
 		<meta name="description" content="Bubble is a simple HTML5 spirit level web app" />
 		<meta name="keywords" content="bubble,spirit,level,spirit level,html,web,app,html5,js,ollieparsley" />
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<link href='http://fonts.googleapis.com/css?family=Armata' rel='stylesheet' type='text/css' />
+		<link type="text/css" href="/bubble.css" rel="stylesheet" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0" />
 	</head>
 	<body>
-		
 		<div id="wrapper">
-			
+			<div id="header">
+				<h1>Bubble</h1>
+			</div>
+		
 			<div id="notSupported" style="display:none;">
 				The device you are using does not have some of the more recent features required to use this app :(
 			</div>
 			
-			<div id="supported" style="display:none;"></div>
+			<div id="supported" style="display:none;">
+				<div id="horizontal" class="track">
+					<div class="marker"></div>
+					<div class="bubble" id="horizontalMarker"></div>
+				</div>
+				
+				<div id="vertical" class="track">
+					<div class="marker"></div>
+					<div class="bubble" id="verticalMarker"></div>
+				</div>
+				
+			</div>
 			
 		</div>
 		
