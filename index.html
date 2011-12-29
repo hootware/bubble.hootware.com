@@ -9,6 +9,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0" />
 	</head>
 	<body>
+		<div id="notSupportedBackground" style="display:none;"></div>
 		<div id="wrapper">
 			<div id="header">
 				<h1>Bubble</h1>
@@ -19,21 +20,32 @@
 			</div>
 			
 			<div id="supported" style="display:none;">
-				<div id="horizontal" class="track">
-					<div class="marker"></div>
-					<div class="bubble" id="horizontalMarker"></div>
+				<div class="section">
+					<div id="horizontal" class="track">
+						<div class="marker"></div>
+						<div class="bubble" id="horizontalMarker"></div>
+					</div>
 				</div>
-				
-				<div id="vertical" class="track">
-					<div class="marker"></div>
-					<div class="bubble" id="verticalMarker"></div>
+				<div class="section">
+					<div id="vertical" class="track">
+						<div class="marker"></div>
+						<div class="bubble" id="verticalMarker"></div>
+					</div>
+					<div id="info">
+						<h2>About Bubble</h2>
+						<p>Bubble is a simple web app that uses your devices gyroscope to give you a spirit level</p>
+						<p>You don't even need to be connected to the internet to use it!</p>
+						<p><a href="http://twitter.com/ollieparsley">Follow me! @OllieParsley ;)</a><br />
+						<a href="http://motionjs.org">Motion.JS</a><br />
+						<a href="http://hootware.com">Hootware Ltd</a></p>
+					</div>
 				</div>
-				
 			</div>
 			
 		</div>
 		
 		<script type="text/javascript" src="/prototype.js"></script>
+		<script type="text/javascript" src="/motion.js"></script>
 		<script type="text/javascript" src="/bubble.js"></script>
 		
 	</body>

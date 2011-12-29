@@ -11,15 +11,17 @@ body {overflow:hidden; padding:0px; margin:0px; background: #949599;}
 	background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #000000), color-stop(0.8, #404242));
 	box-shadow: 0px 5px 10px #777;
 }
-h1 {font-size:2em;
+h1 {position:relative;
+	font-size:2em;
 	font-family: helvetica, arial;
 	margin:0px;
 	padding:5px;
 	text-align:center;
 	color:#ffffff;
 	text-shadow: 0px 2px 2px #000;
+	z-index:100000;
 }
-#wrapper {}
+.section { position:relative; }
 #horizontal.track {
 	position:relative;
 	margin:20px;
@@ -64,7 +66,7 @@ h1 {font-size:2em;
 	background-color: #C0E009;
 	margin-left:-13px;
 	z-index:1000;
-	/*left: 50%;*/
+	left: 50%;
 }
 
 #vertical.track {
@@ -90,6 +92,8 @@ h1 {font-size:2em;
 		color-stop(0.8, #C0E009),
 		color-stop(1, #6FA529)
 	);
+	float:left;
+	margin-top:0px;
 }
 
 #vertical.track .marker {
@@ -115,9 +119,32 @@ h1 {font-size:2em;
 	z-index:1000;
 }
 
+#info {position: absolute; padding:0px; padding-left:70px; padding-right:25px; font-family: helvetica, arial;}
+#info h2 {font-family: helvetica, arial; font-size:1.2em; margin:0px; padding:0px;}
+#info p {font-family: helvetica, arial; font-size:0.9em; text-align:justify;}
+#info p a {text-decoration:none; color: #044201; font-size:0.9em;}
 
+#notSupported{
+	position:absolute;
+	top:70px;
+	left:0px;
+	z-index:20000;
+	background: #ffffff;
+	border-radius:20px;
+	border:4px solid #000000;
+	color: #000000;
+	margin:20px;
+	font-family: helvetica, arial;
+	padding:20px;
+	box-shadow: 0px 0px 10px #333;
+	text-align:center;
+}
 
-
-
-#notSupported {}
-#supported {}
+#notSupportedBackground{
+	position:absolute;
+	z-index:10000;
+	top:0px;
+	left:0px;
+	background: rgba(0,0,0,0.5);
+	margin:0px;
+}

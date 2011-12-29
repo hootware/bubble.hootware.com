@@ -13,6 +13,9 @@
 		//Set the wrapper width and height
 		document.getElementById('wrapper').style.height = dimensions.height + 'px';
 		document.getElementById('wrapper').style.width = dimensions.width + 'px';
+		document.getElementById('notSupportedBackground').style.height = dimensions.height + 'px';
+		document.getElementById('notSupportedBackground').style.width = dimensions.width + 'px';
+		document.getElementById('notSupported').style.width = (dimensions.width - 90) + 'px';
 		document.getElementById('vertical').style.height = dimensions.height - 150 + 'px';
 	}
 	
@@ -45,19 +48,20 @@
 	changeDimensions();
 	
 	//Check for support
-	//if (window.isMotionSupported()) {
-		document.getElementById('supported').style.display = '';
-	//	document.getElementById('notSupported').style.display = '';
-		
-		//W3C orientation spec
-		window.addEventListener("deviceorientation", function(event) {
-			a = event.alpha;
-			b = event.beta;
-			g = event.gamma;
-		}, false);
-
-	//}
+	window.addEventListener('load', function(){
+		if (!window.isMotionSupported()) {
+			document.getElementById('notSupportedBackground').style.display = '';
+			document.getElementById('notSupported').style.display = '';
+		}
+	}, false);
 	
+	//Supported
+	document.getElementById('supported').style.display = '';
+	window.addEventListener("deviceorientation", function(event) {
+		a = event.alpha;
+		b = event.beta;
+		g = event.gamma;
+	}, false);
 	
 	// Check if a new cache is available on page load.
 	window.addEventListener('load', function(e) {
